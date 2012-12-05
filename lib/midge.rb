@@ -1,0 +1,2 @@
+module Midge
+end
