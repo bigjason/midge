@@ -44,10 +44,6 @@ module Midge
       SCRIPT
     end
 
-    def global_name
-      Rails.application.class.parent_name
-    end
-
   end
 
 end

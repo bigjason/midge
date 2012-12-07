@@ -28,23 +28,12 @@ module Midge
     private
 
     def create_processer(klass, namespace)
-      new_klass = Class.new(klass) do
-        @@mutex = Mutex.new
-
-        def self.set_namespace(namespace)
-          @@mutex.synchronize do
-            @@namespace = namespace
-          end
-        end
-
+      new_klass = Class.new(klass)
+      new_klass.class_eval <<-CODE
         def global_name
-          @@mutex.synchronize do
-            @@namespace
-          end
+          "#{namespace}"
         end
-      end
-
-      new_klass.set_namespace(namespace)
+      CODE
       new_klass
     end
 
