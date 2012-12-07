@@ -3,9 +3,12 @@ require 'sprockets/engines'
 
 module Midge
   class Config
+    attr_reader :js_null_processor_enabled
+
     def initialize
       @jst_processors = []
       @js_processors = []
+      set_js_null_processor_enabled(true)
     end
 
     def jst_processor(extension, namespace=Rails.application.class.parent_name)
@@ -14,6 +17,10 @@ module Midge
 
     def js_processor(extension, namespace=Rails.application.class.parent_name)
       @js_processors << [extension, namespace]
+    end
+
+    def set_js_null_processor_enabled(value)
+      @js_null_processor = value
     end
 
     def configure!(sprockets=Sprockets)
@@ -31,7 +38,7 @@ module Midge
       new_klass = Class.new(klass)
       new_klass.class_eval <<-CODE
         def global_name
-          "#{namespace}"
+          #{namespace.inspect}
         end
       CODE
       new_klass
