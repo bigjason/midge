@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Jason Webb"]
   s.email       = ["bigjasonwebb@gmail.com"]
   s.homepage    = "https://github.com/bigjason/midge"
-  s.summary     = "Quick and cheap modules for the rails asset pipeline."
+  s.summary     = "Quick and cheap javascript modules for the rails asset pipeline."
   # s.description = "TODO: Description of Midge."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
