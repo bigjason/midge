@@ -1,0 +1,8 @@
+Description:
+    Create the initializer for midge with some sane defaults.
+
+Example:
+    rails generate midge:install
+
+    This will create:
+        config/initializers/midge.rb
