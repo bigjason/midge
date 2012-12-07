@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary     = "Quick and cheap javascript modules for the rails asset pipeline."
   # s.description = "TODO: Description of Midge."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", ">= 3.1"
