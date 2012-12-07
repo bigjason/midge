@@ -1,22 +1,27 @@
 # Midge
 
-Midge is a quick and cheap javascript module system for the rails asset pipeline.
-
-**Beta Release: Still a work in progress!**
+Midge is a quick and cheap [javascript module](http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth)
+system for the rails asset pipeline.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'midge'
+``` ruby
+gem 'midge'
+```
 
 And then execute:
 
-    $ bundle
+``` console
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install midge
+``` console
+$ gem install midge
+```
 
 ## Usage
 
@@ -62,7 +67,12 @@ So with this in place you can access the `Person` object on the `Midge` namespac
 var guy = new Midge.Person;
 ```
 
-Simple albeit limited javascript modules.
+Voila! Simple albeit limited javascript modules.
+
+## TODO
+
+- Tests
+- Documentation
 
 ## Contributing
 
