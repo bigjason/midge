@@ -69,11 +69,6 @@ var guy = new Midge.Person;
 
 Voila! Simple albeit limited javascript modules.
 
-## TODO
-
-- Tests
-- Documentation
-
 ## Contributing
 
 1. Fork it
