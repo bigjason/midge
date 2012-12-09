@@ -42,16 +42,20 @@ Midge.setup do |config|
 end
 ```
 
-With this setup you create a file called "/app/assets/javascripts/person.midge.js". In this
-file attach public functionality onto the `exports` object.
+With this setup you can create a file with the extension of ".midge.js" or
+".midge.coffee" and it will be module enabled. In the file attach public
+functionality onto the `exports` object. For example:
 
 ``` javascript
+# /app/assets/javascripts/person.midge.js
+
 exports.Person = function() {
   this.name = "A guy";
 };
 ```
 
-The output for this after running through the asset pipeline is:
+The output for this after running through the asset pipeline would be something
+like:
 
 ``` javascript
 (function(exports) {
@@ -61,7 +65,8 @@ The output for this after running through the asset pipeline is:
 }).call(this, (this.Midge || (this.Midge = {})));
 ```
 
-So with this in place you can access the `Person` object on the `Midge` namespace.
+So with this in place you can access the `Person` object on the `Midge`
+namespace.
 
 ``` javascript
 var guy = new Midge.Person;
