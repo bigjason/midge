@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.email       = ["bigjasonwebb@gmail.com"]
   s.homepage    = "https://github.com/bigjason/midge"
   s.summary     = "Quick and cheap javascript modules for the rails asset pipeline."
-  s.description = File.read(File.expand_path("../README.md", __FILE__))
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
