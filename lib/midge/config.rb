@@ -3,12 +3,22 @@ require 'sprockets/engines'
 
 module Midge
   class Config
-    attr_reader :js_null_processor_enabled
+    attr_reader :js_null_processor
+
+    ## Private API ##
 
     def initialize
       @processors = []
-      set_js_null_processor_enabled(true)
+      set :js_null_processor, true
     end
+
+    def configure!(sprockets=Sprockets)
+      @processors.each do |base_klass, extension, namespace|
+        sprockets.register_engine extension, create_processer(base_klass, namespace)
+      end
+    end
+
+    ## Public API ##
 
     def jst_processor(extension, namespace=Rails.application.class.parent_name)
       @processors << [::Midge::JstProcessor, extension, namespace]
@@ -18,14 +28,8 @@ module Midge
       @processors << [::Midge::JavascriptProcessor, extension, namespace]
     end
 
-    def set_js_null_processor_enabled(value)
-      @js_null_processor = value
-    end
-
-    def configure!(sprockets=Sprockets)
-      @processors.each do |base_klass, extension, namespace|
-        sprockets.register_engine extension, create_processer(base_klass, namespace)
-      end
+    def set(property, value)
+      set_instance_variable(property, value)
     end
 
     private

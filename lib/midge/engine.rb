@@ -6,7 +6,10 @@ module Midge
       require 'sprockets'
       require 'sprockets/engines'
 
-      app.assets.register_engine '.js', ::Midge::JavascriptNullProcessor
+      if ::Midge.application_config.js_null_processor
+        app.assets.register_engine '.js', ::Midge::JavascriptNullProcessor
+      end
+
       ::Midge.application_config.configure!(app.assets)
     end
   end
