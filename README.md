@@ -1,7 +1,7 @@
 # Midge
 
 Midge is a quick and cheap [javascript module](http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth)
-system for the rails asset pipeline.
+system for the rails asset pipeline.  It supports multiple namespaces and
 
 ## Installation
 
@@ -47,7 +47,7 @@ With this setup you can create a file with the extension of ".midge.js" or
 functionality onto the `exports` object. For example:
 
 ``` javascript
-# /app/assets/javascripts/person.midge.js
+// /app/assets/javascripts/person.midge.js
 
 exports.Person = function() {
   this.name = "A guy";
