@@ -34,8 +34,7 @@ $ rails generate midge:install
 In the initializer you setup what file extensions will go to what "module".
 
 ``` ruby
-# /config/initializers/midge.rb
-
+# config/initializers/midge.rb
 Midge.setup do |config|
   config.jst_processor ".midge_template", "Midge"
   config.js_processor ".midge", "Midge"
@@ -47,8 +46,7 @@ With this setup you can create a file with the extension of ".midge.js" or
 functionality onto the `exports` object. For example:
 
 ``` javascript
-// /app/assets/javascripts/person.midge.js
-
+// app/assets/javascripts/person.midge.js
 exports.Person = function() {
   this.name = "A guy";
 };
