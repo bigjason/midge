@@ -7,7 +7,7 @@ class ConfigTest < ActiveSupport::TestCase
     @config = Midge::Config.new
   end
 
-  test "js_null_processor is false by default" do
+  test "js_null_processor is true by default" do
     assert_equal config.js_null_processor, true
   end
 

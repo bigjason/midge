@@ -2,7 +2,7 @@
 
 Midge is a quick and cheap [javascript module][jsmodule] system for the rails
 asset pipeline.  You can setup multiple namespaces and use them simalar to how
-[Node.js][nodemodule] modules work.
+[Node.js modules][nodemodule] work.
 
 ## Installation
 
