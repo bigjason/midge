@@ -1,7 +1,8 @@
 # Midge
 
-Midge is a quick and cheap [javascript module](http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth)
-system for the rails asset pipeline.  It supports multiple namespaces and
+Midge is a quick and cheap [javascript module][jsmodule] system for the rails
+asset pipeline.  You can setup multiple namespaces and use them simalar to how
+[Node.js][nodemodule] modules work.
 
 ## Installation
 
@@ -79,3 +80,6 @@ Voila! Simple albeit limited javascript modules.
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+[jsmodule]: http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
+[nodemodule]: http://nodejs.org/api/modules.html#modules_module_exports
