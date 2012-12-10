@@ -29,7 +29,7 @@ module Midge
     end
 
     def set(property, value)
-      set_instance_variable(property, value)
+      instance_variable_set("@#{property}", value)
     end
 
     private
